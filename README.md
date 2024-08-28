@@ -1,7 +1,7 @@
 # logo_detector
 
 
-# Before you run the code in the terminal
+## Before you run the code in the terminal
 Setting the working directory in the terminal (i.e., changing the current working directory) depends on the operating system you are using. Here are common methods to set the working path in different operating systems:
 
 For Windows Users:
@@ -36,7 +36,7 @@ cd \ (in Windows) or cd / (in macOS and Linux): This moves the current directory
 Using these commands can help you navigate quickly between directories in the terminal.
 
 
-# Run the code in the terminal
+## Run the code in the terminal
 To run the provided Python code in the terminal, you need to ensure the following preparations are met:
 
 Install Python: Make sure Python is installed on your system.
@@ -58,16 +58,16 @@ Prepare appropriate command line arguments to run the script, including the path
 Based on these preparations, here are the specific steps and commands you need to input in the terminal:
 
 
-# Install necessary libraries
+## Install necessary libraries
 pip install google-cloud-vision tqdm
 
 
-# Run the script (ensure the code is saved as logo_recognition.py and replace paths and filenames in the command below accordingly)
+## Run the script (ensure the code is saved as logo_recognition.py and replace paths and filenames in the command below accordingly)
 python logo_recognition.py /path/to/images -k /path/to/your/service_account.json -o /path/to/output.csv
 These commands will start the script, processing all images in the file or directory specified, identifying and recording logo information found within the images.
 
 
-# p.s.: 
+## p.s.: 
 1. Google APIs:
 
 These refer to a set of interfaces provided by Google that allow developers to access specific functions and data of Google services. For example, the Google Maps API allows developers to embed maps and perform map-related data operations in their applications, while the Google Drive API enables developers to manage and manipulate files stored on Google Drive.
@@ -108,4 +108,23 @@ Regularly rotate keys, i.e., periodically replace old keys with new ones and dea
 After completing these steps, you will have a service account key that can be used to authenticate and authorize your application to access specified Google Cloud resources.
 
 
-# For security and other well-known reasons, I will not disclose the keys I use. Please ask anyone who needs to use this code to request their own key for all operations to work.
+## For security and other well-known reasons, I will not disclose the keys I use. Anyone who needs to use this code please request your own key for all operations to work.
+
+## Meet the requirements:
+### Took about two hours (not including the time spent looking for test image sets and conducting tests) and 2 different versions of code was saved in a file called logoRec.py and logoRec_multithreading.py
+
+### Looking online for existing logo recognition tools: used Google's API and key, used vision_v1 from google.cloud.
+
+### The multithreading version of code considered the scaling issue. 
+
+### used different image types: utilizing the characteristics of their header.
+
+### The tqdm package was used for progress visualization.
+
+### Sanity check is included.
+
+### To test the validity and generalization of the code, I used two sets of test image sets. One is a folder called samples, which contains simpler, smaller logos, and also takes into account unbranded virtual logos, and the other is a set that includes the images in the samples folder, but with more real-life photos containing logos, and a larger file size and number of images - about 100 in total. There are about 100 images in total, divided into 7 folders (because github allows a maximum number of 100 files to be uploaded at one time, with a size of 25M).
+
+### I ran the code on these two sets of images produced two outputs, both of which showed that the code was running well and with high accuracy. Both test image sets show that the code works well and is highly accurate, and can recognize and output when different logos appear in the same image, or when the same logo appears multiple times in the same image. Virtual logos without branding are also skipped and not misrecognized.
+
+### All the images in the two test image set folders were scanned and the detected logos were saved in the “output_logo_detection_2024” folder at the given location, divided into the “output_samples.csv ” file and ‘output_samplescomplex.csv’.
