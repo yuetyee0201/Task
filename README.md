@@ -110,19 +110,20 @@ After completing these steps, you will have a service account key that can be us
 
 ## For security and other well-known reasons, I will not disclose the keys I use. Anyone who needs to use this code please request your own key for all operations to work.
 
-## Meet the requirements:
-1. Took about two hours (not including the time spent looking for test image sets and conducting tests) and 2 different versions of code was saved in a file called logoRec.py and logoRec_multithreading.py
+## How it meets the requirements:
+1. Took about two hours (not including the time spent looking for test image sets and conducting tests) and 2 different versions of the code was saved in a file called logoRec.py and logoRec_multithreading.py
 
-2. Online existing logo recognition tools: used Google's API and key, used vision_v1 from google.cloud.
+2. Online existing logo recognition tools: used Google's API and key, used vision_v1 from Google. Cloud.
 
-3. The multithreading version of code considered the scaling issue; Different image types were also considered: utilizing the characteristics of their header.
+3. The multithreading version of the code considered the scaling issue. Different image types were also considered, utilizing the characteristics of their header.
 
 4. The tqdm package was used for progress visualization.
 
-5. Sanity check is included.
+5. A sanity check is included.
 
-6. To test the validity and generalization of the code, two sets of test image sets were used. One is a folder called samples, which contains simpler, smaller logos, and also takes into account unbranded virtual logos, and the other is a set that includes the images in the samples folder, but with more real-life photos containing logos, and a larger file size and number of images - about 100 in total. There are about 100 images in total, divided into 7 folders (because github allows a maximum number of 100 files to be uploaded at one time, with a size of 25M).
+6. To test the validity and generalization of the code, two sets of test image sets were used. One is a folder called samples, which contains simpler, smaller logos, and also takes into account unbranded virtual logos, and the other is a set that includes the images in the samples folder, but with more real-life photos containing logos, and a larger file size and number of images - about 100 in total. There are about 100 images in total, divided into 7 folders (because Github allows a maximum number of 100 files to be uploaded at one time, with a size of 25M).
 
-7. two sets of images produced two code outputs, both of which showed that the code was running well and with high accuracy. Both test image sets show that the code works well and is highly accurate, and can recognize and output when different logos appear in the same image, or when the same logo appears multiple times in the same image. Virtual logos without branding are also skipped and not misrecognized.
+7. two sets of images produced two code outputs, both of which showed that the code was running well and with high accuracy. Both test image sets show that the code works well, is highly accurate, and can recognize and output when different logos appear in the same image or when the same logo appears multiple times in the same image. Virtual logos without branding are also skipped and not misrecognized.
 
-8. All the images in the two test image set folders were scanned and the detected logos were saved in the “output_logo_detection_2024” folder at the given location, divided into the “output_samples.csv ” file and ‘output_samplescomplex.csv’.
+8. All the images in the two test image set folders were scanned, and the detected logos were saved in the "output_logo_detection_2024" folder at the given location, divided into the "output_samples.csv" file, "output_samplescomplex.csv" and "output_output_multithreading.csv". Apart from the brand name of the logo, the last one also shows the accuracy of AI detection and the location of the logo in the image.
+
