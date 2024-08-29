@@ -111,7 +111,7 @@ After completing these steps, you will have a service account key that can be us
 ## For security and other well-known reasons, I will not disclose the keys I use. Anyone who needs to use this code please request your own key for all operations to work.
 
 ## How it meets the requirements:
-1. Took about two hours (not including the time spent looking for test image sets and conducting tests) and 2 different versions of the code was saved in a file called logoRec.py and logoRec_multithreading.py
+1. Took more than two hours (including the time spent looking for test image sets and conducting tests); 2 different versions of the code was saved in a file called logoRec.py and logoRec_multithreading.py
 
 2. Online existing logo recognition tools: used Google's API and key, used vision_v1 from Google. Cloud.
 
